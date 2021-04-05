@@ -236,7 +236,7 @@ def certify():
     root_crt_path = 'ca/root-ca.crt'
     root_key_path = 'ca/root-ca/private/root-ca.key'
 
-    root_private_key, root_cert = generate_root_cert()
+    root_private_key, root_cert = generate_root_cert(365 * 20)
 
     # Write root CA certificate to disk
     with open(PKI_DIR / root_crt_path, 'wb') as f:
